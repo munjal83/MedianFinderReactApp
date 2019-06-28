@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import config from './config';
 
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 
@@ -70,7 +71,8 @@ class App extends Component {
 
   _getMedian(number) {
     let upperLimit = number;
-    fetch(`http://localhost:9000/getMedian/${upperLimit}`)
+    let uri = config.API_URI;
+    fetch(`${uri}/getMedian/${upperLimit}`)
       .then(response => {
         if (response.ok) {
           return response.json();
@@ -87,9 +89,10 @@ class App extends Component {
   }
 
   callAPI() {
-    fetch("http://localhost:9000/testAPI")
-      .then(res => res.text())
-      .then(res => this.setState({ apiResponse: res }));
+    let uri = config.API_URI;
+    fetch(`${uri}/testAPI`)
+      .then(response => response.text())
+      .then(response => this.setState({ apiResponse: response }));
   }
 
   componentWillMount() {
