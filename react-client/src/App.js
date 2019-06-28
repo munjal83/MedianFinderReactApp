@@ -59,6 +59,7 @@ class App extends Component {
       limit: "",
       median: "",
       open: false,
+      server: '',
     };
 
     this._sendNumber = this._sendNumber.bind(this);
@@ -84,23 +85,16 @@ class App extends Component {
         throw Error(response.statusText);
       })
       .then(data => {
-        this.setState({ median: data.median }, function () {
+        this.setState({ median: data.median, server: '' }, function () {
         });
       })
-      .catch(() => {
-        this.setState({ median: "An Error occured, Please try again" });
+      .catch((err) => {
+        this.setState({server: 'Server Seems To Be Offline'});
       });
   }
 
-  callAPI() {
-    let uri = config.API_URI;
-    fetch(`${uri}/testAPI`)
-      .then(response => response.text())
-      .then(response => this.setState({ apiResponse: response }));
-  }
-
   componentWillMount() {
-    this.callAPI();
+
   }
 
   handleClose() {
@@ -163,6 +157,18 @@ class App extends Component {
                     align="center"
                   >
                     {this.state.median.length > 1 ? `${this.state.median[0]} & ${this.state.median[1]}` : `${this.state.median}`}
+                  </Typography>
+                </div>
+              </DialogContent>
+              <DialogContent>
+                <div style={styles.row}>
+                  <Typography
+                    variant="title"
+                    component="h3"
+                    color="error"
+                    align="center"
+                  >
+                    {this.state.server}
                   </Typography>
                 </div>
               </DialogContent>
