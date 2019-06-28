@@ -12,3 +12,16 @@ Navigate to each directory and run `npm install` to download dependencies and th
 If there is an error while running `npm install` or `npm start` check for `fsevents` dependency in `package.json` and remove it
 
 Run the above commands again
+
+# Test Cases
+```javascript
+var medianToFind =  20;
+var primeNumbers = getPrimes(medianToFind); // [2,3,5,7,11,13,17,19]
+var medianOfPrimes = getMedian(primeNumbers);  // [7,11]
+```
+
+```javascript
+var medianToFind =  19;
+var primeNumbers = getPrimes(medianToFind); // [2,3,5,7,11,13,17]
+var medianOfPrimes = getMedian(primeNumbers);  // [7]
+```
