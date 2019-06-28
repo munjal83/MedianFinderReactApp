@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches the snapshot 1`] = `
+<div>
+  <form
+    autoComplete="off"
+  >
+    <label
+      className="MuiFormLabel-root-92 MuiInputLabel-root-87 MuiInputLabel-animated-91"
+    >
+      Please Enter A Number
+    </label>
+    <div
+      className="MuiInput-root-99 MuiInput-fullWidth-106 MuiInput-underline-103"
+    >
+      <input
+        className="MuiInput-input-107"
+        id="number"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "flexWrap": "wrap",
+          "fontSize": "2em",
+          "justifyContent": "center",
+          "margin": "0 auto",
+          "padding": "5%",
+        }
+      }
+    >
+      <button
+        className="MuiButtonBase-root-138 MuiButton-root-112 MuiButton-fab-129 MuiButton-extendedFab-130 MuiButton-contained-123 MuiButton-containedPrimary-124 MuiButton-raised-126 MuiButton-raisedPrimary-127"
+        disabled={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex="0"
+        type="button"
+      >
+        <span
+          className="MuiButton-label-113"
+        >
+          Get Median
+        </span>
+        <span
+          className="MuiTouchRipple-root-141"
+        />
+      </button>
+    </div>
+  </form>
+  <button
+    className="MuiButtonBase-root-138 MuiButton-root-112 MuiButton-text-114 MuiButton-flat-117"
+    disabled={false}
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "display": "flex",
+        "flexWrap": "wrap",
+        "fontSize": "2em",
+        "justifyContent": "center",
+        "margin": "0 auto",
+        "padding": "5%",
+      }
+    }
+    tabIndex="0"
+    type="button"
+  >
+    <span
+      className="MuiButton-label-113"
+    >
+      <h3
+        className="MuiTypography-root-148 MuiTypography-subheading-155 MuiTypography-colorError-172 MuiTypography-alignCenter-161"
+      >
+        
+      </h3>
+    </span>
+    <span
+      className="MuiTouchRipple-root-141"
+    />
+  </button>
+</div>
+`;

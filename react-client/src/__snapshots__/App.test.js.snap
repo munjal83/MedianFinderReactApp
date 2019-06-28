@@ -1,0 +1,194 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches the snapshot 1`] = `
+Array [
+  <div
+    style={
+      Object {
+        "flexGrow": 2,
+      }
+    }
+  >
+    <header
+      className="MuiPaper-root-155 MuiPaper-elevation4-161 MuiAppBar-root-147 MuiAppBar-positionStatic-151 MuiAppBar-colorSecondary-154"
+    >
+      <div
+        className="MuiToolbar-root-182 MuiToolbar-regular-184 MuiToolbar-gutters-183"
+      >
+        <h2
+          className="MuiTypography-root-186 MuiTypography-title-192 MuiTypography-colorPrimary-206 MuiTypography-alignCenter-199"
+        >
+          Median Finder
+        </h2>
+      </div>
+    </header>
+  </div>,
+  <div
+    style={
+      Object {
+        "background": "#c2c4c6",
+        "height": "100%",
+        "padding": "15%",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "border": "black",
+          "margin": "0 auto",
+          "maxWidth": 700,
+          "width": "80%",
+        }
+      }
+    >
+      <div
+        className="MuiPaper-root-155 MuiPaper-elevation1-158 MuiPaper-rounded-156 MuiCard-root-211"
+      >
+        <div
+          style={
+            Object {
+              "display": "flex",
+              "flexWrap": "wrap",
+              "justifyContent": "center",
+              "margin": "0 auto",
+            }
+          }
+        >
+          <div
+            className="MuiCardHeader-root-212"
+          >
+            <div
+              className="MuiCardHeader-content-215"
+            >
+              <h3
+                className="MuiTypography-root-186 MuiTypography-display1-190 MuiTypography-colorSecondary-207 MuiTypography-alignCenter-199"
+                gutterbottom={true}
+              >
+                Find Median Of Primes
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          className="MuiCardContent-root-218"
+        >
+          <div
+            style={
+              Object {
+                "display": "flex",
+                "flexWrap": "wrap",
+                "justifyContent": "center",
+                "margin": "0 auto",
+              }
+            }
+          >
+            <div>
+              <form
+                autoComplete="off"
+              >
+                <label
+                  className="MuiFormLabel-root-224 MuiInputLabel-root-219 MuiInputLabel-animated-223"
+                >
+                  Please Enter A Number
+                </label>
+                <div
+                  className="MuiInput-root-231 MuiInput-fullWidth-238 MuiInput-underline-235"
+                >
+                  <input
+                    className="MuiInput-input-239"
+                    id="number"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  style={
+                    Object {
+                      "display": "flex",
+                      "flexWrap": "wrap",
+                      "fontSize": "2em",
+                      "justifyContent": "center",
+                      "margin": "0 auto",
+                      "padding": "5%",
+                    }
+                  }
+                >
+                  <button
+                    className="MuiButtonBase-root-270 MuiButton-root-244 MuiButton-fab-261 MuiButton-extendedFab-262 MuiButton-contained-255 MuiButton-containedPrimary-256 MuiButton-raised-258 MuiButton-raisedPrimary-259"
+                    disabled={false}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                    tabIndex="0"
+                    type="button"
+                  >
+                    <span
+                      className="MuiButton-label-245"
+                    >
+                      Get Median
+                    </span>
+                    <span
+                      className="MuiTouchRipple-root-273"
+                    />
+                  </button>
+                </div>
+              </form>
+              <button
+                className="MuiButtonBase-root-270 MuiButton-root-244 MuiButton-text-246 MuiButton-flat-249"
+                disabled={false}
+                onBlur={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                style={
+                  Object {
+                    "display": "flex",
+                    "flexWrap": "wrap",
+                    "fontSize": "2em",
+                    "justifyContent": "center",
+                    "margin": "0 auto",
+                    "padding": "5%",
+                  }
+                }
+                tabIndex="0"
+                type="button"
+              >
+                <span
+                  className="MuiButton-label-245"
+                >
+                  <h3
+                    className="MuiTypography-root-186 MuiTypography-subheading-193 MuiTypography-colorError-210 MuiTypography-alignCenter-199"
+                  >
+                    
+                  </h3>
+                </span>
+                <span
+                  className="MuiTouchRipple-root-273"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;
