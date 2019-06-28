@@ -53,7 +53,7 @@ class Form extends React.Component {
                 <form autoComplete="off">
                     <TextField
                         id="number"
-                        label="Please Enter Number Here"
+                        label="Please Enter A Number"
                         style={styles.textField}
                         value={this.state.number}
                         onChange={this.handleChange}
