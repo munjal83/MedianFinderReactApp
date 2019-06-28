@@ -89,7 +89,7 @@ class App extends Component {
         });
       })
       .catch((err) => {
-        this.setState({server: 'Server Seems To Be Offline'});
+        this.setState({ server: 'Server Seems To Be Offline' });
       });
   }
 
