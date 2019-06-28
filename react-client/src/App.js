@@ -4,6 +4,7 @@ import config from './config';
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 
 import AppBar from "@material-ui/core/AppBar";
+import Toolbar from '@material-ui/core/Toolbar';
 import Typography from "@material-ui/core/Typography";
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
@@ -14,12 +15,15 @@ import DialogContent from "@material-ui/core/DialogContent";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import Button from '@material-ui/core/Button';
 
-import teal from "@material-ui/core/colors/teal";
-import grey from "@material-ui/core/colors/grey";
+import lightBlue from "@material-ui/core/colors/lightBlue";
+import amber from "@material-ui/core/colors/amber";
 
 import Form from "./pages/Form";
 
 const styles = {
+  root: {
+    flexGrow: 2,
+  },
   container: {
     height: "100%",
     background: "#c2c4c6",
@@ -41,8 +45,8 @@ const styles = {
 
 const theme = createMuiTheme({
   palette: {
-    primary: teal,
-    secondary: grey,
+    primary: lightBlue,
+    secondary: amber,
     text: "#fff"
   }
 });
@@ -63,10 +67,10 @@ class App extends Component {
   }
 
   _sendNumber(number) {
-    this.setState({ limit: number }, function() {
+    this.setState({ limit: number }, function () {
       this._getMedian(this.state.limit);
     });
-    this.setState({open: true});
+    this.setState({ open: true });
   }
 
   _getMedian(number) {
@@ -80,7 +84,7 @@ class App extends Component {
         throw Error(response.statusText);
       })
       .then(data => {
-        this.setState({ median: data.med }, function() {
+        this.setState({ median: data.median }, function () {
         });
       })
       .catch(() => {
@@ -100,17 +104,19 @@ class App extends Component {
   }
 
   handleClose() {
-    this.setState({open: false, median: ""});
+    this.setState({ open: false, median: "" });
   }
   render() {
     const page = [<Form sendNumber={this._sendNumber} />];
     return (
       <MuiThemeProvider theme={theme}>
-        <div>
+        <div style={styles.root}>
           <AppBar position="static" color="secondary">
-            <Typography variant="title" color="primary">
-              Median Finder
+            <Toolbar>
+              <Typography variant="title" color="primary" align="center">
+                Median Finder
             </Typography>
+            </Toolbar>
           </AppBar>
         </div>
         <div style={styles.container}>
@@ -126,7 +132,7 @@ class App extends Component {
                       align="center"
                       component="h3"
                     >
-                      Input a number to get median of all primes
+                      Find Median Of Primes
                     </Typography>
                   }
                 />
@@ -136,8 +142,17 @@ class App extends Component {
               </CardContent>
             </Card>
             <Dialog open={this.state.open} onClose={this.handleClose}>
-              <DialogTitle id="alert-dialog-title" color="secondary">
-                The Median For Primes Below {this.state.limit}
+              <DialogTitle color="primary">
+                <Typography
+                  color="inherit"
+                  gutterbottom
+                  variant="heading"
+                  align="center"
+                  component="h3"
+                >
+                  The Median For Primes Below {this.state.limit}
+                </Typography>
+
               </DialogTitle>
               <DialogContent>
                 <div style={styles.row}>

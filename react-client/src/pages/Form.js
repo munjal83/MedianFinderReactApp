@@ -1,22 +1,19 @@
 import React from 'react';
-import TextField from '@material-ui/core/TextField';
+import Input from '@material-ui/core/Input';
+import InputLabel from '@material-ui/core/InputLabel';
 import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
 const styles = {
 
-    textField: {
-        marginLeft: 120,
-        marginRight: 100,
-        width: 200,
-    },
     row: {
         display: 'flex',
         justifyContent: 'center',
         margin: '0 auto',
         flexWrap: 'wrap',
-        fontSize: '2em'
+        fontSize: '2em',
+        padding: '5%',
     },
 }
 
@@ -34,11 +31,11 @@ class Form extends React.Component {
     }
 
     handleChange(event) {
-        this.setState({ number: event.target.value, alert: '' });        
+        this.setState({ number: event.target.value, alert: '' });
     }
 
     handleSubmit(event) {
-        if (Number.isInteger(Number(this.state.number)) && this.state.number >= 0) {
+        if (Number.isInteger(Number(this.state.number)) && this.state.number >= 3) {
             this.props.sendNumber(this.state.number);
             event.preventDefault();
         } else {
@@ -47,17 +44,16 @@ class Form extends React.Component {
     }
 
     render() {
-        
+
         return (
-            <div style={styles.row}>
+            <div>
                 <form autoComplete="off">
-                    <TextField
+                    <InputLabel>Please Enter A Number</InputLabel>
+                    <Input
                         id="number"
-                        label="Please Enter A Number"
-                        style={styles.textField}
                         value={this.state.number}
                         onChange={this.handleChange}
-                        margin="normal"
+                        fullWidth
                     />
                     <div style={styles.row}>
                         <Button variant="extendedFab" color="primary" onClick={this.handleSubmit}>
@@ -65,15 +61,11 @@ class Form extends React.Component {
                         </Button>
                     </div>
                 </form>
-                <div style={styles.row}>
-                    <Paper style={styles.root} elevation={1}>
-                        <div style={styles.row}>
-                        <Typography variant="title" component="h3" color="error">
-                            {this.state.alert}
-                        </Typography>
-                        </div>
-                    </Paper>
-                </div>
+                <Paper style={styles.row}>
+                    <Typography variant="subheading" component="h3" color="error" align="center">
+                        {this.state.alert}
+                    </Typography>
+                </Paper>
             </div>
         );
     }
